@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "name_for_model": "msoe-retrieval",
+  "name_for_model": "msoe_retrieval",
   "name_for_human": "MSOE Retrieval Plugin",
   "description_for_model": "Plugin for searching through technical documents (such as datasheets, documentation and more) to find answers to questions and retrieve relevant information. Use it whenever a user asks something that might be found in the dataset.",
   "description_for_human": "Search through MSOE documents.",
