@@ -30,6 +30,7 @@ def validate_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_sc
 #app = FastAPI(dependencies=[Depends(validate_token)])
 app = FastAPI()
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Replace "*" with your specific frontend origin, e.g., ["http://localhost:3000"]
@@ -54,6 +55,7 @@ app.mount("/sub", sub_app)
 @app.post(
     "/upsert-file",
     response_model=UpsertResponse,
+    dependencies=[Depends(validate_token)],
 )
 async def upsert_file(
     file: UploadFile = File(...),
@@ -71,6 +73,7 @@ async def upsert_file(
 @app.post(
     "/upsert",
     response_model=UpsertResponse,
+    dependencies=[Depends(validate_token)],
 )
 async def upsert(
     request: UpsertRequest = Body(...),
@@ -122,6 +125,7 @@ async def query(
 @app.delete(
     "/delete",
     response_model=DeleteResponse,
+    dependencies=[Depends(validate_token)],
 )
 async def delete(
     request: DeleteRequest = Body(...),
