@@ -1,9 +1,9 @@
 {
   "schema_version": "v1",
-  "name_for_model": "retrieval",
-  "name_for_human": "Retrieval Plugin",
-  "description_for_model": "Plugin for searching through the user's documents (such as files, emails, and more) to find answers to questions and retrieve relevant information. Use it whenever a user asks something that might be found in their personal information.",
-  "description_for_human": "Search through your documents.",
+  "name_for_model": "msoe-retrieval",
+  "name_for_human": "MSOE Retrieval Plugin",
+  "description_for_model": "Plugin for searching through technical documents (such as datasheets, documentation and more) to find answers to questions and retrieve relevant information. Use it whenever a user asks something that might be found in the dataset.",
+  "description_for_human": "Search through MSOE documents.",
   "auth": {
     "type": "user_http",
     "authorization_type": "bearer"
