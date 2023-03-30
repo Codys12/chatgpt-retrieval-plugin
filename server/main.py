@@ -27,7 +27,8 @@ def validate_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_sc
     return credentials
 
 
-app = FastAPI(dependencies=[Depends(validate_token)])
+#app = FastAPI(dependencies=[Depends(validate_token)])
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
